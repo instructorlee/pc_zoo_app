@@ -18,9 +18,13 @@ public class App {
 				
 				switch(parts[0]) {
 				
+					case "list":
+						// add code here to list all the animals
+						break;
+				
 					case "quit":
 						active = false;
-					break;
+						break;
 					
 					default:
 						comm.outputLine("invalid request");

@@ -13,5 +13,7 @@ public class AnimalTests {
 		Animal animal = new Animal("Fred");
 		
 		Assert.assertEquals("Fred", animal.getName());
+		
+		// implement species, food
 	}
 }
