@@ -31,6 +31,23 @@ public class ZooTests {
 	
 	@Test
 	public void removeAnimalTests() {
-		// how can you test this?
+		// how can you set up the test?
+		
+		this.zoo.addAnimal(new Animal("a", "b", "c"));
+		
+		Animal targetAnimal = new Animal("target", "target", "target");
+		this.zoo.addAnimal(targetAnimal);
+		
+		// test if existing animal is removed
+		boolean result = this.zoo.removeAnimal(targetAnimal);
+		
+		Assert.assertTrue(result);
+		
+		// test if non-existent animal is removed
+		Assert.assertFalse(this.zoo.removeAnimal(new Animal("b", "b", "b")));
+		
+		// was the animal actually removed?
+		Assert.assertFalse(this.zoo.getAnimals().contains(targetAnimal));
+		
 	}
 }

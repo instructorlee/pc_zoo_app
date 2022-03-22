@@ -6,6 +6,10 @@ public class Zoo {
 	
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	
+	public ArrayList<Animal> getAnimals() {
+		return this.animals;
+	}
+	
 	public Zoo() {}
 	
 	// what data will be needed if any
@@ -19,6 +23,6 @@ public class Zoo {
 	
 	public boolean removeAnimal(Animal animal) {
 		
-		return false;
+		return this.animals.remove(animal);
 	}
 }
