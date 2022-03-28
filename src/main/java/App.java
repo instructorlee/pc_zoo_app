@@ -1,5 +1,6 @@
 package main.java;
 
+import main.java.classes.Animal;
 import main.java.classes.Comm;
 import main.java.classes.Zoo;
 
@@ -13,6 +14,11 @@ public class App {
 		boolean active = true;
 		String[] parts;
 		Zoo zoo = new Zoo();
+
+		zoo.addAnimal(new Animal("Polly", "parrot", "leaves"));
+		zoo.addAnimal(new Animal("Leo", "lion", "people"));
+		zoo.addAnimal(new Animal("Marvin", "monkey", "fruit"));
+		zoo.addAnimal(new Animal("Flo", "flamingo", "shrimp and algae"));
 		
 		while(active) {
 			parts = comm.getRequest("Prompt:");
